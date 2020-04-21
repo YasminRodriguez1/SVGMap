@@ -22,13 +22,14 @@ path:hover {
   margin-right: auto;
 
 }
-		
-.controls button{
-	font-size: 100px;
-}
 
 .controls{
   position: fixed;
+  margin-left: 10%;
+}
+		
+.controls button{
+	font-size: 15px;
 }
 
 #tooltip {
@@ -36,5 +37,5 @@ path:hover {
   border: 1px solid black;
   border-radius: 5px;
   padding: 5px;
-  font-size: 70px;
+  font-size: 20px;
 }
