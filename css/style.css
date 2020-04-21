@@ -25,10 +25,16 @@ path:hover {
 
 .controls{
   position: fixed;
-  margin-left: 10%;
+  margin-left: 3%;
+  margin-top: 3%;
+  display: inline-grid;
 }
-		
-.controls button{
+	
+.controls a {
+  padding: 2%;
+}	
+
+.controls a button{
   font-size: 15px;
 }
 
