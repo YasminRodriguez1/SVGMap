@@ -1,0 +1,40 @@
+svg, .panzoom {
+  display:block;
+  width:100% ;
+  height: 96%;
+  border: 1px;
+  border-color: black;
+}
+
+path { 
+  cursor: pointer;
+  fill: lightgray; 
+  stroke: white;
+}
+
+path:hover {
+  fill: gray;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+		
+.controls button{
+	font-size: 100px;
+}
+
+.controls{
+  position: fixed;
+}
+
+#tooltip {
+  background: cornsilk;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 70px;
+}
