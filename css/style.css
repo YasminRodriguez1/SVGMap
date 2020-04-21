@@ -4,6 +4,7 @@ svg, .panzoom {
   height: 96%;
   border: 1px;
   border-color: black;
+  margin-top: 2%;
 }
 
 path { 
