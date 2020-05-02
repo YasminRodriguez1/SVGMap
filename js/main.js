@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     panZoomMap = svgPanZoom('#map', {
         controlIconsEnabled: false,
         minZoom: 1,
+        maxZoom: 10,
         center: true,
         dblClickZoomEnabled: true,
         mouseWheelZoomEnabled: true,
@@ -53,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var countryCount = countryElements.length;
     for (var i = 0; i < countryCount; i++) {
       countryElements[i].onmousemove = function(event) {
-        showTooltip(event, "[" + this.getAttribute('data-id')+ "," + this.getAttribute('data-lat') + "," + this.getAttribute('data-long')+ ',' + this.getAttribute('data-name') + "]");
+        showTooltip(event, "[" + this.getAttribute('data-id')+ "," + this.getAttribute('data-lat') + "," + this.getAttribute('data-long')+ ',' + this.getAttribute('data-name') + "," + this.getAttribute('data-capital') + "]");
 
       }
 
@@ -62,5 +63,28 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
       }
     }
+
+    /*
+    // Logging list of countries and their information. 
+    var printcountryElements = document.getElementById('countries').childNodes;
+    var printcountryCount = printcountryElements.length;
+    for (var i = 0; i < printcountryCount; i++) {
+      if (printcountryElements[i].nodeName == "path")
+      {
+        console.log(  printcountryElements[i].getAttribute('data-id')          + ", "  
+                    + printcountryElements[i].getAttribute('data-lat')         + ", " 
+                    + printcountryElements[i].getAttribute('data-long')        + ', ' 
+                    + printcountryElements[i].getAttribute('data-name')        + ", " 
+                    + printcountryElements[i].getAttribute('data-capital')     + ", " 
+                    + printcountryElements[i].getAttribute('data-geoid')       + ", " 
+                    + printcountryElements[i].getAttribute('data-juristic')    + ", " 
+                    + printcountryElements[i].getAttribute('data-method')      + ", " 
+                    + printcountryElements[i].getAttribute('data-fajr')        + ", " 
+                    + printcountryElements[i].getAttribute('data-isha')        + ", " 
+                    + printcountryElements[i].getAttribute('data-islamicfinderurl')
+                  );
+      }
+    }
+    */
 
 });
